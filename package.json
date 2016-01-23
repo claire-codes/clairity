@@ -1,0 +1,26 @@
+{
+  "name": "clairity",
+  "version": "0.1.0",
+  "description": "Claire's Utilty JS functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claireparker/clairity.git"
+  },
+  "keywords": [
+    "one-liners"
+  ],
+  "author": "Claire Parker <claire.parker87@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claireparker/clairity/issues"
+  },
+  "homepage": "https://github.com/claireparker/clairity#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
