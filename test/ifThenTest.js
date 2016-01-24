@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var ifThen = require('../module/ifThen');
+var ifThen = require('../index').ifThen;
 
 describe('#ifThen', function() {
   it('if-condition is true returns 2nd argument', function() {
