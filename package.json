@@ -2,7 +2,6 @@
   "name": "clairity",
   "version": "0.1.0",
   "description": "Claire's Utilty JS functions",
-  "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },
@@ -10,6 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/claireparker/clairity.git"
   },
+  "files": [
+    "/*.js",
+    "/module/"
+  ],
   "keywords": [
     "one-liners"
   ],
