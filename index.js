@@ -1,4 +1,5 @@
 var ifThen = require('./module/ifThen');
+var itContains = require('./module/itContains');
 
 module.exports = (function() {
   return {
@@ -12,6 +13,7 @@ module.exports = (function() {
     //     return undefined;
     //   }
     // }
-    ifThen: ifThen
+    ifThen: ifThen,
+    itContains: itContains
   }
 })();
