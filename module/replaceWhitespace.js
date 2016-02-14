@@ -7,14 +7,14 @@ var _ = require("underscore");
  * Trims whitespace from the beginning and end of the string.
  *
  * @param {string} str The string to do the replacing on.
- * @param {str} replace The character to replace the whitespace with.
+ * @param {str} replacement The character to replace the whitespace with.
  * @return {str} The original str without whitespace.
  */
-module.exports = function(str, replace) {
-  // not amazing, what about other falseys or non-strings?
-  if (replace === undefined) {
-    replace = '';
+module.exports = function(str, replacement) {
+  if (!(_.isString(replacement))) {
+    replacement = '';
   }
   str = str.trim();
-  return str.replace(new RegExp('\\s', 'g'), replace);
+  str = str.replace(/(\s)+/, ' ');
+  return str.replace(new RegExp('\\s', 'g'), replacement);
 };
