@@ -11,19 +11,21 @@ describe("#fuzzy", function() {
         expect(fuzzy(testString, "fly")).to.eq(true);
         expect(fuzzy(testString, "gon")).to.eq(true);
     });
-
-    xit("returns null if args are wrong", function() {
-      testArray = ['foo','bar'];
-      expect(howMany()).to.equal(null);
-      expect(howMany(testArray)).to.equal(null);
-      expect(howMany('foo')).to.equal(null);
+    
+    it("returns true if the letters are not next to each other", function() {
+        testString = "toadstool";
+        expect(fuzzy(testString, "as")).to.eq(true);
+        expect(fuzzy(testString, "toadtool")).to.eq(true);
+        expect(fuzzy(testString, "tt")).to.eq(true);
+        expect(fuzzy(testString, "tl")).to.eq(true);
     });
+    
+    it("is case-insensitive", function() {
+        testString = "Blackberry";
+        expect(fuzzy(testString, "bLACKBERRY")).to.eq(true);
+        expect(fuzzy(testString, "Bb")).to.eq(true);
+        expect(fuzzy(testString, "bb")).to.eq(true);
+        expect(fuzzy(testString, "bB")).to.eq(true);
+    })
 
-    xit("returns null if arg types aren't array & string/number", function() {
-      var anArray = [];
-      var anObject = {};
-      expect(howMany(anArray, anArray)).to.eq(null);
-      expect(howMany(anArray, anObject)).to.eq(null);
-      expect(howMany(anObject, anArray)).to.eq(null);
-    });
 });
